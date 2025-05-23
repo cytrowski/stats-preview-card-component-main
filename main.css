@@ -1,0 +1,151 @@
+@view-transition {
+  navigation: auto;
+}
+
+html {
+  --primary-color: #a663d4;
+}
+
+body {
+  margin: 0;
+  background-color: #0a0c1b;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  background-color: #1c1938;
+  width: 350px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.header-image {
+  width: 100%;
+  filter: sepia(1) hue-rotate(251deg);
+  view-transition-name: header-image;
+}
+
+h1 {
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 em {
+  font-style: normal;
+  color: var(--primary-color);
+}
+
+p {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+}
+
+li {
+  text-transform: none;
+  text-align: left;
+}
+
+.stats {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+
+  > li {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    list-style-type: none;
+    text-align: center;
+
+    > strong {
+      font-weight: 700;
+      font-size: 23px;
+      text-transform: none;
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.primary-button {
+  background-color: var(--primary-color);
+  padding: 15px 10px;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 18px;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  label {
+    text-align: left;
+  }
+
+  .stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    input {
+      padding: 5px 2px;
+    }
+  }
+
+  .inline {
+    display: flex;
+  }
+}
+
+@media (width >= 1200px) {
+  .container {
+    display: flex;
+    width: 1000px;
+    flex-direction: row-reverse;
+  }
+
+  .content {
+    width: 60%;
+    padding: 70px;
+    text-align: left;
+  }
+
+  .header-image {
+    width: 40%;
+    object-fit: cover;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+}
